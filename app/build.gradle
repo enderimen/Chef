@@ -25,4 +25,23 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    // build.gradle(Module: app)
+    compile 'com.google.firebase:firebase-auth:11.2.2'
+    compile 'com.google.firebase:firebase-messaging:11.2.2'
+    compile 'com.google.firebase:firebase-database:11.2.2'
+    compile 'com.google.firebase:firebase-storage:11.2.2'
+    compile 'com.google.firebase:firebase-config:11.2.2'
+    compile 'com.google.android.gms:play-services-auth:11.2.2'
+    compile 'com.firebaseui:firebase-ui-auth:2.3.0'
 }
+configurations.all {
+    resolutionStrategy.eachDependency { details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.1'
+            }
+        }
+    }
+}
+apply plugin: 'com.google.gms.google-services'

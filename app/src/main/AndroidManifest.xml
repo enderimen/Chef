@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.acer.chef" >
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.acer.chef">
 
     <application
         android:allowBackup="true"
@@ -9,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,4 +20,8 @@
         </activity>
     </application>
 
+    <meta-data
+        tools:replace="android:value"
+        android:name="android.support.VERSION"
+        android:value="26.1.0" />
 </manifest>
