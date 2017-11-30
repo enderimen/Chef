@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "826743196354",
+    "firebase_url": "https://chef-9162e.firebaseio.com",
+    "project_id": "chef-9162e",
+    "storage_bucket": "chef-9162e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826743196354:android:221f3ce2745af361",
+        "android_client_info": {
+          "package_name": "com.example.acer.chef"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826743196354-e9imi24g13b7nsr90gi6knf4j2hif1cc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk5twFYQ5cmT_0dfkzDE5axM0TDVBgbhM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
