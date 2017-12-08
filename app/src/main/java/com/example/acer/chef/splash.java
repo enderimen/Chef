@@ -22,7 +22,7 @@ public class splash extends Activity {
         logo.setImageResource(R.drawable.chef);
 
         ImageView text;
-        text = (ImageView) findViewById(R.id.chef_text);
+        text = (ImageView) findViewById(R.id.chefTextId);
         text.setImageResource(R.drawable.chef_text);
 
         Thread timerThread = new Thread(){
