@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "826743196354-in3qvv1fosgkk458pr8t9mbbp193cu66.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acer.chef",
+            "certificate_hash": "5ea9812be8b151df4b68b143cbb97d49004e4390"
+          }
+        },
+        {
           "client_id": "826743196354-e9imi24g13b7nsr90gi6knf4j2hif1cc.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826743196354-e9imi24g13b7nsr90gi6knf4j2hif1cc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
