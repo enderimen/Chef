@@ -25,7 +25,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/yemek_adi"
+                    android:id="@+id/txt_yemek_adi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -34,7 +34,7 @@
                     android:textSize="20dp" />
 
                 <EditText
-                    android:id="@+id/editText_baslik"
+                    android:id="@+id/edit_yemek_adi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -51,8 +51,9 @@
                     android:text="Resim Yükle"
                     android:textSize="20dp" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/image_resim_yukle"
+                    style="@android:style/Widget.Material.Light.ImageButton"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_alignParentStart="true"
@@ -161,10 +162,70 @@
                     />
 
                 <TextView
-                    android:id="@+id/txtView"
+                    android:id="@+id/txt_seekbar_ekranda_goster"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txt_zaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Zaman" />
+                <TableLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TableRow>
+
+                    <TextView
+                        android:id="@+id/txt_zaman_hazirlanma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hazırlanma Süresi" />
+                    <EditText
+                        android:id="@+id/edit_zaman_hazirlanma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/txt_zaman_pisme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pişme Süresi" />
+                        <EditText
+                            android:id="@+id/edit_zaman_pisme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="" />
+
+                    </TableRow>
+
+                    <EditText
+                        android:id="@+id/edit_tarif"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textMultiLine"
+                        android:hint="Tarifini yazınız..." />
+
+                    <TableRow>
+                        <Button
+                            android:id="@+id/button_gonder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Paylaş" />
+                    </TableRow>
+                </TableLayout>
+
+
+
 
             </LinearLayout>
 

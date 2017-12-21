@@ -1,6 +1,11 @@
 package com.example.acer.chef;
 
+import android.app.ActionBar;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.drm.DrmStore;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -12,18 +17,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.firebase.*;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
-
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.widget.TabHost;
 import android.widget.Toast;
-
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.widget.TextView;
 import java.util.Arrays;
 
 
@@ -31,24 +36,6 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     FloatingActionButton fab;
-
-  /*  @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-    }
-*/
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -57,6 +44,7 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+
     }
 
  /*   @Override
@@ -92,9 +80,27 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
             Toast.makeText(getApplicationContext(),"Takip Ettiklerime Tıklandı.", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_cikis) {
-            Toast.makeText(getApplicationContext(),"Ayarlara Tıklandı.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Çıkış Tıklandı.", Toast.LENGTH_LONG).show();
+            final AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+            builder.setMessage("Çıkış yapmak istediğinize emin misiniz?");
+            builder.setCancelable(true);
+            builder.setNegativeButton("Evet", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    finish();
+                    mFirebaseAuth.signOut();
+                }
+            });
+            builder.setPositiveButton("Hayır", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+            AlertDialog alertDialog=builder.create();
+            alertDialog.show();
         } else if (id == R.id.nav_manage) {
-            Toast.makeText(getApplicationContext(),"Çıkış Yap Tıklandı.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Ayarlar Yap Tıklandı.", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_share) {
             Toast.makeText(getApplicationContext(),"İbrahim KAYA Tıklandı.", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_send) {
@@ -137,6 +143,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -157,12 +165,13 @@ public class MainActivity extends AppCompatActivity
 
         if (requestCode == RC_SIGN_IN){
             if (requestCode==RESULT_OK){
-                Toast.makeText(this, "Giriş yapıldı", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Hoş geldin" + mFirebaseAuth.getCurrentUser().getDisplayName(), Toast.LENGTH_SHORT).show();
             }else if(resultCode==RESULT_CANCELED){
                 finish();
             }
         }
     }
+
 
     public void baslangic(){
 
@@ -172,7 +181,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null){
+                if (user != null ){
                     Toast.makeText(MainActivity.this,"Giriş Başarılı",Toast.LENGTH_SHORT).show();
                 }else{
                     startActivityForResult(
