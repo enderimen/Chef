@@ -4,5 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="bgColor">#EE3B24</color>
+    <color name="button">#9ccc65</color>
+    <color name="white">#fff</color>
+    <color name="hr">#ef9a9a</color>
 </resources>
 

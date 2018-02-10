@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.acer.chef.PaylasimYap">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+            android:paddingRight="10px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:srcCompat="@android:drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/txt_yemek_adi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Yemek Adı"
+                    android:textColor="@color/bgColor"
+                    android:textSize="20dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/txt_kac_kisilik"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Kaç Kişilik :"
+                            android:textColor="@color/bgColor"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/txt_kac_kisilik_deger"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/bgColor"
+                            android:textSize="20dp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/txt_icindekiler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:inputType="textMultiLine"
+                            android:text="Malzemeler;"
+                            android:textColor="@color/bgColor"
+                            android:textSize="20dp" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/txt_icindekiler_deger"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:inputType="textMultiLine"
+                            android:text="..."
+                            android:textColor="@color/bgColor"
+                            android:textSize="20dp" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/txt_zaman"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Hazırlanma Süresi :"
+                            android:textColor="@color/bgColor"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/txt_zaman_deger"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="..."
+                            android:textColor="@color/bgColor"
+                            android:textSize="20dp" />
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/txt_tarif"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Tarif :"
+                        android:textColor="@color/bgColor"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_tarif_deger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="..."
+                        android:textColor="@color/bgColor"
+                        android:textSize="20dp" />
+
+                </TableLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

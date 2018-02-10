@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "826743196354-bvuctah70jhvthtav87l7n93i7ctpd74.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acer.chef",
+            "certificate_hash": "889fa292bb72145dedb462cf629dd50759d3ce28"
+          }
+        },
+        {
           "client_id": "826743196354-in3qvv1fosgkk458pr8t9mbbp193cu66.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

@@ -3,7 +3,8 @@ package com.example.acer.chef;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 /**
@@ -17,25 +18,34 @@ public class splash extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
 
+        Animation downToUp , upToDown;
+
         ImageView logo;
         logo = (ImageView) findViewById(R.id.imageViewId);
         logo.setImageResource(R.drawable.chef);
 
-        ImageView text;
-        text = (ImageView) findViewById(R.id.chefTextId);
-        text.setImageResource(R.drawable.chef_text);
+        ImageView chefText;
+        chefText = (ImageView) findViewById(R.id.chef_text);
+        chefText.setImageResource(R.drawable.chef_text);
+
+        downToUp = AnimationUtils.loadAnimation(this,R.anim.down_to_up);
+
+        upToDown = AnimationUtils.loadAnimation(this,R.anim.up_to_down);
+        logo.setAnimation(downToUp);
+        chefText.setAnimation(upToDown);
 
         Thread timerThread = new Thread(){
 
             public void run(){
                 try {
-                    sleep(3000);
+                    sleep(2000);
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{
                     Intent intent;
-                    intent = new Intent(splash.this, MainActivity.class);
+                    intent = new Intent(splash.this,LoginActivity.class);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.right_in,R.anim.left_out);
                 }
             }
         };

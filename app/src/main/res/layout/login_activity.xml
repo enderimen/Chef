@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="20dp"
+    android:background="@drawable/login_bg">
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="210dp"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="40dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/chef_text" />
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:paddingTop="110dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:hint="E-mail"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/white" />
+
+        <EditText
+            android:id="@+id/etSifre"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:hint="Şifre"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/buttonGiris"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_shape"
+            android:bottomRightRadius="50dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Giriş Yap"
+            android:textAllCaps="false"
+            android:textColor="#d32f2f"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="220dp"
+            android:layout_height="0.5px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/hr" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvkayit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/login_logo"
+        android:layout_below="@+id/login_layout"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Hesabınız yok mu?"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvkayit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvkayit1"
+        android:layout_alignBottom="@+id/tvkayit1"
+        android:layout_alignEnd="@+id/login_logo"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Kayıt Olun"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

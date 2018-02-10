@@ -1,0 +1,5 @@
+<root>
+    <item name='android.os.Binder void withCleanCallingIdentity(ThrowingRunnable) 0'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

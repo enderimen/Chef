@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.acer.chef.PaylasimYap">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10px"
+            android:paddingRight="10px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_yemek_adi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Yemek Adı*"
+                    android:textColor="@color/bgColor"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/edit_yemek_adi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/yemek_adi"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_resim_yukle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText2"
+                    android:text="Resim Yükle*"
+                    android:textColor="@color/bgColor"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/image_resim_yukle"
+                    style="@android:style/Widget.Material.Light.ImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView3"
+                    app:srcCompat="@android:drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/txt_kategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imageView2"
+                    android:padding="5dp"
+                    android:text="Kategori Seç*"
+                    android:textColor="@color/bgColor"
+                    android:textSize="20dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radio_ana_yemek"
+                            android:layout_width="113dp"
+                            android:layout_height="wrap_content"
+                            android:text="Ana Yemek" />
+
+                        <RadioButton
+                            android:id="@+id/radio_vejetaryan"
+                            android:layout_width="111dp"
+                            android:layout_height="wrap_content"
+                            android:text="Vejeteryan" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radio_hamurlu_yemekler"
+                            android:layout_width="158dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hamurlu Yemekler" />
+
+                        <RadioButton
+                            android:id="@+id/radio_corba"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Çorba" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radio_et_balık_tavuk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Et-Balık-Tavuk" />
+
+                        <RadioButton
+                            android:id="@+id/radio_tatlilar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tatlılar" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radio_unlu_yemekler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Unlu Yemekler" />
+
+                        <RadioButton
+                            android:id="@+id/radio_sebzeler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sebzeler" />
+
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/txt_kac_kisilik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Kaç Kişilik*"
+                    android:textColor="@color/bgColor"
+                    android:textSize="20dp" />
+
+                <com.xw.repo.BubbleSeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:bsb_bubble_color="#39706b"
+                    app:bsb_bubble_text_color="@android:color/white"
+                    app:bsb_max="20"
+                    app:bsb_min="1"
+                    app:bsb_progress="0"
+                    app:bsb_second_track_color="#004d40"
+                    app:bsb_section_count="1"
+                    app:bsb_section_text_position="bottom_sides"
+                    app:bsb_show_section_mark="true"
+                    app:bsb_show_section_text="true"
+                    app:bsb_show_thumb_text="true"
+                    app:bsb_track_color="#39706b" />
+
+                <TextView
+                    android:id="@+id/txt_seekbar_ekranda_goster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/txt_icindekiler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Malzemeleri giriniz"
+                    android:inputType="textMultiLine"
+                    android:text="Malzemeler*"
+                    android:textColor="@color/bgColor"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/edit_icindekiler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+
+
+                <TextView
+                    android:id="@+id/txt_zaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Zaman*"
+                    android:textColor="@color/bgColor"
+                    android:textSize="20dp" />
+
+                <TableLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/txt_zaman_hazirlanma"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hazırlanma Süresi(dk)*" />
+
+                        <EditText
+                            android:id="@+id/edit_zaman_hazirlanma"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPersonName" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/txt_zaman_pisme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pişme Süresi(dk)*" />
+
+                        <EditText
+                            android:id="@+id/edit_zaman_pisme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="" />
+
+                    </TableRow>
+
+                    <EditText
+                        android:id="@+id/edit_tarif"
+                        android:layout_width="match_parent"
+                        android:layout_height="91dp"
+                        android:ems="10"
+                        android:hint="Tarifinizi yazınız..."
+                        android:inputType="textMultiLine" />
+
+                    <Button
+                        android:id="@+id/button_gonder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/button"
+                        android:text="Paylaş"
+                        android:textColor="#fff" />
+                </TableLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
